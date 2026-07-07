@@ -45,11 +45,14 @@ To simulate a live conversation, the workflow utilizes `RequestInput` at each in
 *   **Why it's needed:** The interview is inherently multi-turn. The AI poses a question, pauses execution, returns the question to the client interface, and waits until the human candidate submits their answer.
 *   **Implementation:** The orchestrator yield-returns a `RequestInput` with a unique `interrupt_id` (e.g. `q_0`, `q_1`, `q_2`). Once the user responds, the graph resumes with the answer stored in `ctx.resume_inputs`.
 
-## Demo Walkthrough
+## Suggested Demo Walkthrough
 1.  **Resume Submission:** A user submits their resume and desired role. The system logs PII redaction and displays a generated 3-question plan.
 2.  **Interactive Questions:** The user answers behavioral and technical questions. The `feedback_agent` provides accuracy scores and coach feedback.
 3.  **Coding Evaluation:** The user writes a python function for a coding problem. The `coding_evaluator` leverages `validate_python_syntax` tool via MCP to verify syntax correctness and provides hints.
 4.  **Final Report:** The `roadmap_agent` compiles all scores and uses MCP tools to construct a final report with recommended resources and practice challenges.
+
+## Visited to view demo [YouTube](https://youtu.be/P2yPBV88PeI)
+## Submitted On [Kaggle](https://kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783360503378)
 
 ## Impact & Value Statement
 GeminiInterviewer enables candidates to prepare for specific job descriptions and receive expert communication feedback on-demand, reducing interview anxiety and improving interview pass rates.
