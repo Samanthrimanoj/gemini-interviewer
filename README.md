@@ -100,31 +100,3 @@ graph TD
     *   **Cause:** Stale or retired Gemini model specified in environment.
     *   **Fix:** Modify `GEMINI_MODEL=gemini-2.5-flash` in your `.env` file.
 
-## Push to GitHub
-
-1. Create a new repo at https://github.com/new
-   - Name: gemini-interviewer
-   - Visibility: Public or Private
-   - Do NOT initialize with README (you already have one)
-
-2. In your terminal, navigate into your project folder:
-   cd gemini-interviewer
-   git init
-   git add .
-   git commit -m "Initial commit: gemini-interviewer ADK agent"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/gemini-interviewer.git
-   git push -u origin main
-
-3. Verify .gitignore includes:
-   .env          ← your API key — must NEVER be pushed
-   .venv/
-   __pycache__/
-   *.pyc
-   .adk/
-
-⚠ NEVER push .env to GitHub. Your API key will be exposed publicly.
-
-## Demo Script
-
-See [DEMO_SCRIPT.txt](DEMO_SCRIPT.txt) for a ~3–4 minute spoken narration to use while presenting the project.
